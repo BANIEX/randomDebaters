@@ -35,6 +35,44 @@ function work(){
         console.log(rightUserNationality);
 
 
+        if(userData.readyState == 4){
+            console.log("its ready");
+            function loader(){
+                document.getElementById("loader").style.display = "block";
+                document.getElementsByClassName("up")[0].style.opacity = "0.1"
+                setTimeout( changer , 5000);
+            }
+    
+            loader()
+
+
+
+
+        }
+
+
+        // function loader(){
+        //     document.getElementById("loader").style.display = "block";
+        //     document.getElementsByClassName("up")[0].style.opacity = "0.1"
+        //     setTimeout( changer , 5000);
+        // }
+
+        // loader()
+
+
+        function changer(){
+
+
+            document.getElementById("loader").style.display = "none";
+           
+
+
+
+
+
+
+        
+
         // DATA CHANGE FOR LEFT USER
 
         document.getElementById("debater1").src = parsedData.results[0].picture.large;
@@ -49,7 +87,14 @@ function work(){
         document.getElementById("debater2").src = parsedData.results[1].picture.large;
         document.getElementsByClassName("right_name")[0].innerText = rightUserName;
         document.getElementsByClassName("right_age")[0].innerText = rightUserAge;
-        document.getElementsByClassName("right_country")[0].innerText = righttUserNationality;
+        document.getElementsByClassName("right_country")[0].innerText = rightUserNationality;
+
+
+
+        document.getElementsByClassName("up")[0].style.opacity = "1"
+
+
+        }
 
 
 
